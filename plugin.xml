@@ -7,7 +7,7 @@
     <license>Apache 2.0</license>
     <keywords>cordova,device,reactnative</keywords>
     
-    <js-module name="ReactNativeAppBridge" src="www/ReactNativeAppBrige.js">
+    <js-module name="ReactNativeAppBridge" src="www/ReactNativeAppBridge.js">
         <clobbers target="ReactNativeAppBridge" />
     </js-module>
     <engines>
