@@ -1,0 +1,16 @@
+{
+    "name": "fourthapp-reactnativebridge-plugin",
+    "version": "0.0.1",
+    "description": "Cordova Plugin for opening fourth app react native page",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/theeheng/fourthapp-reactnative-bridge-plugin.git"
+    },
+    "keywords": [],
+    "author": "Author Name",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/theeheng/fourthapp-reactnative-bridge-plugin/issues"
+    },
+    "homepage": "https://github.com/theeheng/fourthapp-reactnative-bridge-plugin#readme"
+}
