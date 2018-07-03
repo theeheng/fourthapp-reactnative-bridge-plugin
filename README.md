@@ -1,0 +1,1 @@
+# fourthapp-reactnative-bridge-plugin
