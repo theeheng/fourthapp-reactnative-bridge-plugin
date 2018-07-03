@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="fourthapp-reactnative-bridge-plugin" version="0.0.1">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="fourthapp-reactnativebridge-plugin" version="0.0.1"
+        xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Device</name>
     <description>Cordova Plugin for opening fourth app react native page</description>
-    <license>MIT</license>
+    <license>Apache 2.0</license>
     <keywords>cordova,device,reactnative</keywords>
     
-    <js-module name="ReactNativeAppBridgeManager" src="www/ReactNativeAppBrige.js">
-        <clobbers target="cordova.plugins.reactnativeappbridge" />
+    <js-module name="ReactNativeAppBridge" src="www/ReactNativeAppBrige.js">
+        <clobbers target="ReactNativeAppBridge" />
     </js-module>
     <engines>
-        <engine name="cordova" version=">=3.6.0"></engine>
+        <engine name="cordova-android" version=">=4.1.0"/>
     </engines>
+    <!-- android -->
     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ReactNativeAppBridge">
+                <param name="android-package" value="org.apache.cordova.reactnativeappbridge.ReactNativeAppBridge" />
+            </feature>
+        </config-file>
         <source-file src="src/android/org/apache/cordova/reactnativeappbridge/ReactNativeAppBridge.java"
                      target-dir="src/org/apache/cordova/reactnativeappbridge"></source-file>
         <source-file src="src/android/org/apache/cordova/reactnativeappbridge/MainReactActivity.java"
                      target-dir="src/org/apache/cordova/reactnativeappbridge"></source-file>
-
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AndroidSensorManager">
-                <param name="android-package" value="com.codingsans.ionic.sensormanager.AndroidSensorManager" />
-            </feature>
-        </config-file>
 
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
 
