@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="fourthapp-reactnative-bridge-plugin" version="0.0.1">
+    <name>Device</name>
+    <description>Cordova Plugin for opening fourth app react native page</description>
+    <license>MIT</license>
+    <keywords>cordova,device,reactnative</keywords>
+    
+    <js-module name="ReactNativeAppBridgeManager" src="www/ReactNativeAppBrige.js">
+        <clobbers target="cordova.plugins.reactnativeappbridge" />
+    </js-module>
+    <engines>
+        <engine name="cordova" version=">=3.6.0"></engine>
+    </engines>
+    <platform name="android">
+        <source-file src="src/android/org/apache/cordova/reactnativeappbridge/ReactNativeAppBridge.java"
+                     target-dir="src/org/apache/cordova/reactnativeappbridge"></source-file>
+        <source-file src="src/android/org/apache/cordova/reactnativeappbridge/MainReactActivity.java"
+                     target-dir="src/org/apache/cordova/reactnativeappbridge"></source-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AndroidSensorManager">
+                <param name="android-package" value="com.codingsans.ionic.sensormanager.AndroidSensorManager" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+
+            <activity android:theme="@android:style/Theme.Black.NoTitleBar" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize" android:name="org.apache.cordova.reactnativeappbridge.MainReactActivity"/>
+            <activity android:theme="@android:style/Theme.Black.NoTitleBar" android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        </config-file>
+    </platform>
+</plugin>
