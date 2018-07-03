@@ -1,5 +1,4 @@
-cordova.define("fourthapp-reactnative-bridge-plugin", function(require, exports, module) {
-
+cordova.define("fourthapp-reactnativebridge-plugin", function(require, exports, module) {
 
 (function() {
 
@@ -7,7 +6,7 @@ cordova.define("fourthapp-reactnative-bridge-plugin", function(require, exports,
 
     module.exports = {
       openReactNativeApp: function (eventname) {
-                        exec(null, null, "InAppBrowser", "openReactNativeApp", []);
+                        exec(null, null, "ReactNativeAppBridge", "openReactNativeApp", []);
       }
     }
 })();

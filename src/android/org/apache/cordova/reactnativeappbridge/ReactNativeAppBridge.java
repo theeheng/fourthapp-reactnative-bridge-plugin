@@ -20,7 +20,7 @@ public class ReactNativeAppBridge extends CordovaPlugin {
                 @Override
                 public void run() {
                     Context mContext = cordova.getActivity();
-                    Intent reactNativeIntent = new Intent(mContext, com.fourth.marketplace.qa.MainReactActivity.class);
+                    Intent reactNativeIntent = new Intent(mContext, org.apache.cordova.reactnativeappbridge.MainReactActivity.class);
                     mContext.startActivity(reactNativeIntent);
                 }
             });

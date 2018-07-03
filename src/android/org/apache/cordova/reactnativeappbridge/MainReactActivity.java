@@ -1,4 +1,4 @@
-package com.fourth.marketplace.qa;
+package org.apache.cordova.reactnativeappbridge;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainReactActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "SimpleReactProject";
+        return "MainReactActivity";
     }
 }
