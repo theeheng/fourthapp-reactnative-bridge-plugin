@@ -1,5 +1,3 @@
-cordova.define("fourthapp-reactnativebridge-plugin", function(require, exports, module) {
-
 (function() {
 
     var exec = require('cordova/exec');
@@ -11,4 +9,3 @@ cordova.define("fourthapp-reactnativebridge-plugin", function(require, exports, 
     }
 })();
 
-});
